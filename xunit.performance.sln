@@ -38,7 +38,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{62661607
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{21A168B8-03A9-48A7-81FF-81D938F8F4DD}"
 	ProjectSection(SolutionItems) = preProject
-		src\xunit.performance.nuspec = src\xunit.performance.nuspec
 		src\xunit.performance.runner.Windows.nuspec = src\xunit.performance.runner.Windows.nuspec
 	EndProjectSection
 EndProject
@@ -57,6 +56,8 @@ EndProject
 Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.analysis.NuGet", "src\xunit.performance.analysis.NuGet\xunit.performance.analysis.NuGet.nuproj", "{DDED5CAB-F121-489B-A6B2-13A5B87910CB}"
 EndProject
 Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.run.core.NuGet", "src\xunit.performance.run.core.NuGet\xunit.performance.run.core.NuGet.nuproj", "{A0AC85F7-4FB8-498C-A7CE-DE818C91EA43}"
+EndProject
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.NuGet", "src\xunit.performance.NuGet\xunit.performance.NuGet.nuproj", "{AC17F809-1397-43DC-9961-0EC7F8C69EDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -112,6 +113,10 @@ Global
 		{A0AC85F7-4FB8-498C-A7CE-DE818C91EA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0AC85F7-4FB8-498C-A7CE-DE818C91EA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0AC85F7-4FB8-498C-A7CE-DE818C91EA43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC17F809-1397-43DC-9961-0EC7F8C69EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC17F809-1397-43DC-9961-0EC7F8C69EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC17F809-1397-43DC-9961-0EC7F8C69EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC17F809-1397-43DC-9961-0EC7F8C69EDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,5 +139,6 @@ Global
 		{55595E8A-EB17-41B4-82BD-BF26FDAD618B} = {F5C85B5B-B786-454C-BB24-822826881735}
 		{DDED5CAB-F121-489B-A6B2-13A5B87910CB} = {FFA0DF6D-DF10-4E29-97B3-B78F66990325}
 		{A0AC85F7-4FB8-498C-A7CE-DE818C91EA43} = {F5C85B5B-B786-454C-BB24-822826881735}
+		{AC17F809-1397-43DC-9961-0EC7F8C69EDD} = {694DAB50-E5DA-4ADC-AD63-591F2FC8EB35}
 	EndGlobalSection
 EndGlobal

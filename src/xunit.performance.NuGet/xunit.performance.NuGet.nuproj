@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>ac17f809-1397-43dc-9961-0ec7f8c69edd</ProjectGuid>
+    <NuProjPath>$(UserProfile)\.nuget\packages\NuProj\0.10.48-beta-gea4a31bbc5\tools\</NuProjPath>
+    <NuSpecTemplate>xunit.performance.nuspec</NuSpecTemplate>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>Microsoft.DotNet.xunit.performance</Id>
+    <Title>xUnit Performance</Title>
+    <Authors>ericeil@microsoft.com;pharring@microsoft.com</Authors>
+    <Owners>Microsoft</Owners>
+    <Description>
+      Contains extensions for authoring and executing performance tests in xUnit.
+
+      Supported platforms:
+      - Desktop .NET 4.6
+      - .NET Core (Universal Windows Apps 10+)
+
+    </Description>
+    <ProjectUrl>https://github.com/Microsoft/xunit-performance</ProjectUrl>
+    <LicenseUrl>https://raw.githubusercontent.com/Microsoft/xunit-performance/$GitCommitIdShort$/LICENSE</LicenseUrl>
+    <IconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</IconUrl>
+    <Language>en-US</Language>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <None Include="xunit.performance.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xunit.performance.core\xunit.performance.core.csproj" />
+    <ProjectReference Include="..\xunit.performance.execution.desktop\xunit.performance.execution.desktop.csproj" />
+    <ProjectReference Include="..\xunit.performance.execution.dotnet\xunit.performance.execution.dotnet.csproj" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>
