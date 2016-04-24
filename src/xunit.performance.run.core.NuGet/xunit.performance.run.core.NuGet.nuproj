@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>a0ac85f7-4fb8-498c-a7ce-de818c91ea43</ProjectGuid>
+    <NuProjPath>$(UserProfile)\.nuget\packages\NuProj\0.10.48-beta-gea4a31bbc5\tools\</NuProjPath>
+    <NuSpecTemplate>xunit.performance.run.core.nuspec</NuSpecTemplate>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>Microsoft.DotNet.xunit.performance.run.core</Id>
+    <Title>xUnit Performance Runner core implementation</Title>
+    <Authors>ericeil@microsoft.com;pharring@microsoft.com</Authors>
+    <Owners>Microsoft</Owners>
+    <Description>Contains the core portable functionality used by xunit.performance.run.</Description>
+    <ProjectUrl>https://github.com/Microsoft/xunit-performance</ProjectUrl>
+    <LicenseUrl>https://raw.githubusercontent.com/Microsoft/xunit-performance/$GitCommitIdShort$/LICENSE</LicenseUrl>
+    <IconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</IconUrl>
+    <Language>en-US</Language>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <None Include="xunit.performance.run.core.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xunit.performance.core\xunit.performance.core.csproj" />
+    <ProjectReference Include="..\xunit.performance.run.core\xunit.performance.run.core.csproj" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>

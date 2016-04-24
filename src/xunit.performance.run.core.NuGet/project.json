@@ -1,0 +1,16 @@
+{
+  "frameworks": {
+    "net451": { }
+  },
+  "dependencies": {
+    "EnlistmentInfo": "1.0.4",
+    "Nerdbank.GitVersioning": {
+      "version": "1.4.19",
+      "suppressParent": "none"
+    },
+    "NuProj": "0.10.48-beta-gea4a31bbc5"
+  },
+  "runtimes": {
+    "win": { }
+  }
+}
