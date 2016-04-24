@@ -1,20 +1,15 @@
 {
-  "supports": {
-    "net46.app": {},
-    "uwp.10.0.app": {}
-  },
   "dependencies": {
     "Nerdbank.GitVersioning": {
       "suppressParent": "none",
       "version": "1.4.19"
     },
-    "xunit.extensibility.core": "2.1.0",
-    "Microsoft.NETCore": "5.0.0",
-    "Microsoft.NETCore.Portable.Compatibility": "1.0.0"
+    "xunit.extensibility.core": "2.1.0"
   },
   "frameworks": {
-    "dotnet": {
-      "imports": "portable-net45+win8"
-    }
+    "net46": { }
+  },
+  "runtimes": {
+    "win": { }
   }
 }

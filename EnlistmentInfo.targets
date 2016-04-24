@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="GetRuntimeDependencies"
+          DependsOnTargets="ResolveReferences"
+          Returns="@(ReferenceCopyLocalPaths)" />
+
+  <Target Name="DeployDependenciesToNuPkgTools"
+          BeforeTargets="PrepareForBuild"
+          Condition=" '$(MSBuildProjectExtension)' == '.nuproj' ">
+    <ItemGroup>
+      <ProjectReference Condition=" '%(ProjectReference.PackageDirectory)' == 'Tools' ">
+        <PackageOutputGroups>%(ProjectReference.PackageOutputGroups);GetRuntimeDependencies</PackageOutputGroups>
+      </ProjectReference>
+    </ItemGroup>
+  </Target>
+</Project>

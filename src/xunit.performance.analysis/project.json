@@ -1,7 +1,12 @@
 ﻿{
   "dependencies": {
+    "EnlistmentInfo": "1.0.4",
     "MathNet.Numerics": "3.7.0",
-    "Microsoft.Diagnostics.Tracing.TraceEvent": "1.0.39"
+    "Microsoft.Diagnostics.Tracing.TraceEvent": "1.0.39",
+    "NuProj.Common": {
+      "suppressParent": "none",
+      "version": "0.10.48-beta-gea4a31bbc5"
+    }
   },
   "frameworks": {
     "net46": { }
