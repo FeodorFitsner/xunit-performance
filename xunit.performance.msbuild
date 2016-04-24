@@ -71,29 +71,18 @@
         Properties="Configuration=$(Configuration);TrackFileAccess=$(TrackFileAccess)"/>
   </Target>
 
-  <Target Name="SetVersionNumber">
-    <RegexReplace
-        Pattern='AssemblyVersion\("99\.99\.99\.0"\)'
-        Replacement='AssemblyVersion("$(BuildAssemblyVersion)")'
-        Files='src\common\GlobalAssemblyInfo.cs'
-        Condition=" '$(BuildAssemblyVersion)' != '' "/>
-    <RegexReplace
-        Pattern='AssemblyInformationalVersion\("99\.99\.99-dev"\)'
-        Replacement='AssemblyInformationalVersion("$(BuildSemanticVersion)")'
-        Files='src\common\GlobalAssemblyInfo.cs'
-        Condition=" '$(BuildSemanticVersion)' != '' "/>
+  <Target Name="SetVersionNumber" DependsOnTargets="GetBuildVersion">
     <RegexReplace
         Pattern='"99\.99\.99-dev"'
-        Replacement='"$(BuildSemanticVersion)"'
-        Files='@(ProjectJsonFiles)'
-        Condition=" '$(BuildSemanticVersion)' != '' "/>
+        Replacement='"$(NuGetPackageVersion)"'
+        Files='@(ProjectJsonFiles)' />
   </Target>
 
-  <Target Name='Packages'>
+  <Target Name='Packages' DependsOnTargets='GetBuildVersion'>
     <Message Text="Creating NuGet packages..." Importance="High" />
     <MakeDir Directories="$(NugetPackageOutputDirectory)" />
-    <Exec Condition="'$(BuildSemanticVersion)' == ''" Command='"$(NuGetExePath)" pack %(NuspecFiles.Identity) -OutputDirectory $(NugetPackageOutputDirectory) -NoPackageAnalysis -NonInteractive -Verbosity quiet -Properties Configuration=$(Configuration)' />
-    <Exec Condition="'$(BuildSemanticVersion)' != ''" Command='"$(NuGetExePath)" pack %(NuspecFiles.Identity) -OutputDirectory $(NugetPackageOutputDirectory) -Version $(BuildSemanticVersion) -NoPackageAnalysis -NonInteractive -Verbosity quiet -Properties Configuration=$(Configuration)' />
+    <Exec Condition="'$(NugetPackageVersion)' == ''" Command='"$(NuGetExePath)" pack %(NuspecFiles.Identity) -OutputDirectory $(NugetPackageOutputDirectory) -NoPackageAnalysis -NonInteractive -Verbosity quiet -Properties Configuration=$(Configuration)' />
+    <Exec Condition="'$(NugetPackageVersion)' != ''" Command='"$(NuGetExePath)" pack %(NuspecFiles.Identity) -OutputDirectory $(NugetPackageOutputDirectory) -Version $(NugetPackageVersion) -NoPackageAnalysis -NonInteractive -Verbosity quiet -Properties Configuration=$(Configuration)' />
   </Target>
 
   <Target Name="_DownloadNuGet">
