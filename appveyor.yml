@@ -3,7 +3,7 @@ os: Visual Studio 2015 - GCE
 configuration: Release
 before_build:
 - ps: >-
-    nuget restore src
+    nuget restore src -DisableParallelProcessing
 build:
   parallel: true
   verbosity: minimal
