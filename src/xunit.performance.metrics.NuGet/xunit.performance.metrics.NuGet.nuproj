@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>5c122ecb-32a8-424a-8ddb-641d546e6cf9</ProjectGuid>
+    <NuProjPath>$(UserProfile)\.nuget\packages\NuProj\0.10.48-beta-gea4a31bbc5\tools\</NuProjPath>
+    <NuSpecTemplate>xunit.performance.metrics.nuspec</NuSpecTemplate>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>Microsoft.DotNet.xunit.performance.metrics</Id>
+    <Title>xUnit Performance Metrics</Title>
+    <Authors>ericeil@microsoft.com;pharring@microsoft.com</Authors>
+    <Owners>Microsoft</Owners>
+    <Description>
+      Contains the tools necessary for defining custom metrics to be consumed by the xUnit Performance framework.
+      Only supports Desktop .NET 4.6 for now due to a dependency on TraceEvent.
+    </Description>
+    <ProjectUrl>https://github.com/Microsoft/xunit-performance</ProjectUrl>
+    <LicenseUrl>https://raw.githubusercontent.com/Microsoft/xunit-performance/$GitCommitIdShort$/LICENSE</LicenseUrl>
+    <IconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</IconUrl>
+    <Language>en-US</Language>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <None Include="xunit.performance.metrics.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xunit.performance.metrics\xunit.performance.metrics.csproj" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>

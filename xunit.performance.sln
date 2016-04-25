@@ -64,6 +64,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimplePerfTests.cli", "Simp
 		test\SimplePerfTests.cli\SimplePerfTests.cs = test\SimplePerfTests.cli\SimplePerfTests.cs
 	EndProjectSection
 EndProject
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.metrics.NuGet", "src\xunit.performance.metrics.NuGet\xunit.performance.metrics.NuGet.nuproj", "{5C122ECB-32A8-424A-8DDB-641D546E6CF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,6 +128,10 @@ Global
 		{8695475E-AC43-46D9-83D8-431975337DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8695475E-AC43-46D9-83D8-431975337DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8695475E-AC43-46D9-83D8-431975337DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C122ECB-32A8-424A-8DDB-641D546E6CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C122ECB-32A8-424A-8DDB-641D546E6CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C122ECB-32A8-424A-8DDB-641D546E6CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C122ECB-32A8-424A-8DDB-641D546E6CF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -150,5 +156,6 @@ Global
 		{AC17F809-1397-43DC-9961-0EC7F8C69EDD} = {694DAB50-E5DA-4ADC-AD63-591F2FC8EB35}
 		{8695475E-AC43-46D9-83D8-431975337DBE} = {F5C85B5B-B786-454C-BB24-822826881735}
 		{8C5B92F1-CB00-474E-9118-E798964D0638} = {8EF4D527-CD8B-4B75-89A3-44137F143AA7}
+		{5C122ECB-32A8-424A-8DDB-641D546E6CF9} = {F5C85B5B-B786-454C-BB24-822826881735}
 	EndGlobalSection
 EndGlobal
