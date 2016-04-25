@@ -37,6 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{694DAB50-E5D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{FD0EC0E2-6E03-4C88-8ECE-674DF8A5405E}"
 	ProjectSection(SolutionItems) = preProject
+		samples\EnlistmentInfo.props = samples\EnlistmentInfo.props
 		samples\NuGet.config = samples\NuGet.config
 	EndProjectSection
 EndProject
