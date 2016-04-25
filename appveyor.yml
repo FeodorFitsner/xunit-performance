@@ -5,7 +5,7 @@ cache:
  - '%USERPROFILE%\.nuget\packages -> **\project.json'
 before_build:
 - ps: >-
-    nuget restore src -Verbosity quiet
+    nuget restore src
 build:
   project: src\xunit.performance.sln
   parallel: true
