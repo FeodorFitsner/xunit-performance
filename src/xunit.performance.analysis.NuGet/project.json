@@ -8,7 +8,11 @@
       "version": "1.4.19",
       "suppressParent": "none"
     },
-    "NuProj": "0.10.48-beta-gea4a31bbc5"
+    "NuProj": "0.10.48-beta-gea4a31bbc5",
+    "ReadOnlySourceTree": {
+      "suppressParent": "none",
+      "version": "0.1.36-beta"
+    }
   },
   "runtimes": {
     "win": { }
