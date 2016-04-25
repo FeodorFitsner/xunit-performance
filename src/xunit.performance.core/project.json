@@ -4,6 +4,10 @@
     "uwp.10.0.app": {}
   },
   "dependencies": {
+    "EnlistmentInfo": {
+      "suppressParent": "none",
+      "version": "1.0.4"
+    },
     "Nerdbank.GitVersioning": {
       "suppressParent": "none",
       "version": "1.4.19"

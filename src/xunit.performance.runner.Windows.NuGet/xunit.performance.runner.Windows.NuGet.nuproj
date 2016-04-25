@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>8695475e-ac43-46d9-83d8-431975337dbe</ProjectGuid>
+    <NuProjPath>$(UserProfile)\.nuget\packages\NuProj\0.10.48-beta-gea4a31bbc5\tools\</NuProjPath>
+    <NuSpecTemplate>xunit.performance.runner.Windows.nuspec</NuSpecTemplate>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>Microsoft.DotNet.xunit.performance.runner.Windows</Id>
+    <Title>xUnit Performance Runner for Windows</Title>
+    <Authors>ericeil@microsoft.com;pharring@microsoft.com</Authors>
+    <Owners>Microsoft</Owners>
+    <Description>Contains the tools necessary for running xunit Performance tests in Windows using ETW tracing.</Description>
+    <ProjectUrl>https://github.com/Microsoft/xunit-performance</ProjectUrl>
+    <LicenseUrl>https://raw.githubusercontent.com/Microsoft/xunit-performance/$GitCommitIdShort$/LICENSE</LicenseUrl>
+    <IconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</IconUrl>
+    <Language>en-US</Language>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <None Include="xunit.performance.runner.Windows.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xunit.performance.run\xunit.performance.run.csproj">
+      <PackageDirectory>Tools</PackageDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>

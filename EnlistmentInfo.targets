@@ -1,8 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Target Name="GetRuntimeDependencies"
-          DependsOnTargets="ResolveReferences"
-          Returns="@(ReferenceCopyLocalPaths)" />
+          DependsOnTargets="ResolveReferences;GetCopyToOutputDirectoryItems;BuiltProjectOutputGroup;SatelliteDllsProjectOutputGroup;SatelliteDllsProjectOutputGroupDependencies"
+          Returns="@(DeployableOutputs)">
+    <ItemGroup>
+      <DeployableOutputs Include="
+                            @(ReferenceCopyLocalPaths);
+                            @(AllItemsFullPathWithTargetPath);
+                            @(BuiltProjectOutputGroupOutput->'%(FinalOutputPath)');
+                            "
+                         Condition=" '%(Extension)' != '.pdb' ">
+        <RequiringProjectFullPath>$(MSBuildProjectFullPath)</RequiringProjectFullPath>
+        <MSBuildSourceTargetName>GetRuntimeDependencies</MSBuildSourceTargetName>
+      </DeployableOutputs>
+      <DeployableOutputs Include="
+                            @(SatelliteDllsProjectOutputGroupOutput);
+                            @(SatelliteDllsProjectOutputGroupDependency);
+                            "
+                         Condition=" '%(SatelliteDllsProjectOutputGroupOutput.WithCulture)' == 'true' or  '%(SatelliteDllsProjectOutputGroupDependency.WithCulture)' == 'true' ">
+        <RequiringProjectFullPath>$(MSBuildProjectFullPath)</RequiringProjectFullPath>
+        <MSBuildSourceTargetName>GetRuntimeDependencies</MSBuildSourceTargetName>
+      </DeployableOutputs>
+    </ItemGroup>
+  </Target>
 
   <Target Name="DeployDependenciesToNuPkgTools"
           BeforeTargets="PrepareForBuild"

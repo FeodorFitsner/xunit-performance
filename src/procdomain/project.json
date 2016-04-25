@@ -1,8 +1,16 @@
 {
   "dependencies": {
+    "EnlistmentInfo": {
+      "suppressParent": "none",
+      "version": "1.0.4"
+    },
     "Nerdbank.GitVersioning": {
       "suppressParent": "none",
       "version": "1.4.19"
+    },
+    "NuProj.Common": {
+      "suppressParent": "none",
+      "version": "0.10.48-beta-gea4a31bbc5"
     },
     "xunit.extensibility.core": "2.1.0"
   },
