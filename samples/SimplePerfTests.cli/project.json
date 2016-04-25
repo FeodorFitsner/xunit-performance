@@ -1,16 +1,19 @@
 {
-    "version": "1.0.0-*",
+  "version": "1.0.0-*",
 
-    "dependencies": {
-      "xunit.core": "2.1.0",
-      "Microsoft.DotNet.xunit.performance.run.core": "1.0.0-alpha-build0030"
-    },
-    "frameworks": {
-        "dnxcore50": {
-          "imports": "portable-net45+win8",
-          "dependencies": {
-            "NETStandard.Library": "1.0.0-rc3-23904",
-          }
-        }
+  "dependencies": {
+    "xunit.core": "2.1.0",
+    "Microsoft.DotNet.xunit.performance.run.core": "1.0.11-*"
+  },
+  "frameworks": {
+    "dnxcore50": {
+      "imports": "portable-net45+win8",
+      "dependencies": {
+        "NETStandard.Library": "1.0.0-rc3-23904",
+      }
     }
+  },
+  "runtimes": {
+    "win7-x64": { }
+  }
 }
