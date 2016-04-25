@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.analysis", "src\xunit.performance.analysis\xunit.performance.analysis.csproj", "{E114F722-0353-4BCE-A1BE-A6D729FDEACD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.analysis", "xunit.performance.analysis\xunit.performance.analysis.csproj", "{E114F722-0353-4BCE-A1BE-A6D729FDEACD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePerfTests", "samples\SimplePerfTests\SimplePerfTests.csproj", "{F92BE283-3DC0-49E5-8FD1-E1F5FADD4ADC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePerfTests", "..\samples\SimplePerfTests\SimplePerfTests.csproj", "{F92BE283-3DC0-49E5-8FD1-E1F5FADD4ADC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcDomain", "src\ProcDomain\ProcDomain.csproj", "{905ABE0D-B057-4218-A56B-9C25A9DCA6E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcDomain", "ProcDomain\ProcDomain.csproj", "{905ABE0D-B057-4218-A56B-9C25A9DCA6E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.logger", "src\xunit.performance.logger\xunit.performance.logger.csproj", "{B7B0A4D7-EF9D-4CED-954A-F6E69E30CE27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.logger", "xunit.performance.logger\xunit.performance.logger.csproj", "{B7B0A4D7-EF9D-4CED-954A-F6E69E30CE27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.run", "src\xunit.performance.run\xunit.performance.run.csproj", "{F188C16F-C268-4674-88FE-04F9D608024F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.run", "xunit.performance.run\xunit.performance.run.csproj", "{F188C16F-C268-4674-88FE-04F9D608024F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.execution.desktop", "src\xunit.performance.execution.desktop\xunit.performance.execution.desktop.csproj", "{E8ABD75E-4F88-434F-B400-30AB32FDB0ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.execution.desktop", "xunit.performance.execution.desktop\xunit.performance.execution.desktop.csproj", "{E8ABD75E-4F88-434F-B400-30AB32FDB0ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.core", "src\xunit.performance.core\xunit.performance.core.csproj", "{D8820889-CC47-42B6-BAC1-01D16D241ECE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.core", "xunit.performance.core\xunit.performance.core.csproj", "{D8820889-CC47-42B6-BAC1-01D16D241ECE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.execution.dotnet", "src\xunit.performance.execution.dotnet\xunit.performance.execution.dotnet.csproj", "{B67EB81A-F0DE-495A-96FA-C5482E8FB58F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.execution.dotnet", "xunit.performance.execution.dotnet\xunit.performance.execution.dotnet.csproj", "{B67EB81A-F0DE-495A-96FA-C5482E8FB58F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "execution", "execution", "{6D71B976-46EE-42E0-877E-69080B49F903}"
 EndProject
@@ -25,45 +25,45 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{AB946B1D-E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{62661607-5106-4B93-A108-A088992095B9}"
 	ProjectSection(SolutionItems) = preProject
-		.gitattributes = .gitattributes
-		.gitignore = .gitignore
-		appveyor.yml = appveyor.yml
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		..\appveyor.yml = ..\appveyor.yml
 		EnlistmentInfo.props = EnlistmentInfo.props
 		EnlistmentInfo.targets = EnlistmentInfo.targets
-		NuGet.config = NuGet.config
-		version.json = version.json
+		..\NuGet.config = ..\NuGet.config
+		..\version.json = ..\version.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{694DAB50-E5DA-4ADC-AD63-591F2FC8EB35}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{FD0EC0E2-6E03-4C88-8ECE-674DF8A5405E}"
 	ProjectSection(SolutionItems) = preProject
-		samples\EnlistmentInfo.props = samples\EnlistmentInfo.props
-		samples\NuGet.config = samples\NuGet.config
+		..\samples\EnlistmentInfo.props = ..\samples\EnlistmentInfo.props
+		..\samples\NuGet.config = ..\samples\NuGet.config
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "runner", "runner", "{F5C85B5B-B786-454C-BB24-822826881735}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "analysis", "analysis", "{FFA0DF6D-DF10-4E29-97B3-B78F66990325}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.metrics", "src\xunit.performance.metrics\xunit.performance.metrics.csproj", "{517B6982-4F98-417F-9987-9C6B64EE6E1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.metrics", "xunit.performance.metrics\xunit.performance.metrics.csproj", "{517B6982-4F98-417F-9987-9C6B64EE6E1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.run.core", "src\xunit.performance.run.core\xunit.performance.run.core.csproj", "{55595E8A-EB17-41B4-82BD-BF26FDAD618B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.performance.run.core", "xunit.performance.run.core\xunit.performance.run.core.csproj", "{55595E8A-EB17-41B4-82BD-BF26FDAD618B}"
 EndProject
-Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.analysis.NuGet", "src\xunit.performance.analysis.NuGet\xunit.performance.analysis.NuGet.nuproj", "{DDED5CAB-F121-489B-A6B2-13A5B87910CB}"
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.analysis.NuGet", "xunit.performance.analysis.NuGet\xunit.performance.analysis.NuGet.nuproj", "{DDED5CAB-F121-489B-A6B2-13A5B87910CB}"
 EndProject
-Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.run.core.NuGet", "src\xunit.performance.run.core.NuGet\xunit.performance.run.core.NuGet.nuproj", "{A0AC85F7-4FB8-498C-A7CE-DE818C91EA43}"
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.run.core.NuGet", "xunit.performance.run.core.NuGet\xunit.performance.run.core.NuGet.nuproj", "{A0AC85F7-4FB8-498C-A7CE-DE818C91EA43}"
 EndProject
-Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.NuGet", "src\xunit.performance.NuGet\xunit.performance.NuGet.nuproj", "{AC17F809-1397-43DC-9961-0EC7F8C69EDD}"
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.NuGet", "xunit.performance.NuGet\xunit.performance.NuGet.nuproj", "{AC17F809-1397-43DC-9961-0EC7F8C69EDD}"
 EndProject
-Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.runner.Windows.NuGet", "src\xunit.performance.runner.Windows.NuGet\xunit.performance.runner.Windows.NuGet.nuproj", "{8695475E-AC43-46D9-83D8-431975337DBE}"
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.runner.Windows.NuGet", "xunit.performance.runner.Windows.NuGet\xunit.performance.runner.Windows.NuGet.nuproj", "{8695475E-AC43-46D9-83D8-431975337DBE}"
 EndProject
-Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.metrics.NuGet", "src\xunit.performance.metrics.NuGet\xunit.performance.metrics.NuGet.nuproj", "{5C122ECB-32A8-424A-8DDB-641D546E6CF9}"
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.metrics.NuGet", "xunit.performance.metrics.NuGet\xunit.performance.metrics.NuGet.nuproj", "{5C122ECB-32A8-424A-8DDB-641D546E6CF9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimplePerfTests.cli", "SimplePerfTests.cli", "{BF705704-55DA-419B-9AC5-A31BBE674B4E}"
 	ProjectSection(SolutionItems) = preProject
-		samples\SimplePerfTests.cli\project.json = samples\SimplePerfTests.cli\project.json
-		samples\SimplePerfTests.cli\SimplePerfTests.cs = samples\SimplePerfTests.cli\SimplePerfTests.cs
+		..\samples\SimplePerfTests.cli\project.json = ..\samples\SimplePerfTests.cli\project.json
+		..\samples\SimplePerfTests.cli\SimplePerfTests.cs = ..\samples\SimplePerfTests.cli\SimplePerfTests.cs
 	EndProjectSection
 EndProject
 Global

@@ -3,7 +3,7 @@ os: Visual Studio 2015
 configuration: Release
 before_build:
 - ps: >-
-    nuget restore -Verbosity quiet
+    nuget restore src -Verbosity quiet
 build:
   parallel: true
   verbosity: minimal
