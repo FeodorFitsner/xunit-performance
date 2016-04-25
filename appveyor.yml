@@ -2,8 +2,9 @@ version: 1.0.{build}
 os: Visual Studio 2015 - GCE
 configuration: Release
 before_build:
-- ps: >-
-    nuget restore src -DisableParallelProcessing
+- ps: if (Test-Path 'C:\Tools\NuGet3') { $nugetDir = 'C:\Tools\NuGet3' } else { $nugetDir = 'C:\Tools\NuGet' }
+- ps: (New-Object Net.WebClient).DownloadFile('https://dist.nuget.org/win-x86-commandline/v3.4.3/nuget.exe', "$nugetDir\NuGet.exe")
+- nuget restore src
 build:
   parallel: true
   verbosity: minimal
