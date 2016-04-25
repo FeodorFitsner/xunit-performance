@@ -27,18 +27,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{62661607
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		CiBuild.cmd = CiBuild.cmd
 		EnlistmentInfo.props = EnlistmentInfo.props
 		EnlistmentInfo.targets = EnlistmentInfo.targets
-		NightlyBuild.cmd = NightlyBuild.cmd
 		NuGet.config = NuGet.config
-		SamplesBuild.cmd = SamplesBuild.cmd
 		version.json = version.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{694DAB50-E5DA-4ADC-AD63-591F2FC8EB35}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{FD0EC0E2-6E03-4C88-8ECE-674DF8A5405E}"
+	ProjectSection(SolutionItems) = preProject
+		samples\NuGet.config = samples\NuGet.config
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "runner", "runner", "{F5C85B5B-B786-454C-BB24-822826881735}"
 EndProject
@@ -55,6 +55,14 @@ EndProject
 Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.NuGet", "src\xunit.performance.NuGet\xunit.performance.NuGet.nuproj", "{AC17F809-1397-43DC-9961-0EC7F8C69EDD}"
 EndProject
 Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "xunit.performance.runner.Windows.NuGet", "src\xunit.performance.runner.Windows.NuGet\xunit.performance.runner.Windows.NuGet.nuproj", "{8695475E-AC43-46D9-83D8-431975337DBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8EF4D527-CD8B-4B75-89A3-44137F143AA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimplePerfTests.cli", "SimplePerfTests.cli", "{8C5B92F1-CB00-474E-9118-E798964D0638}"
+	ProjectSection(SolutionItems) = preProject
+		test\SimplePerfTests.cli\project.json = test\SimplePerfTests.cli\project.json
+		test\SimplePerfTests.cli\SimplePerfTests.cs = test\SimplePerfTests.cli\SimplePerfTests.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,5 +149,6 @@ Global
 		{A0AC85F7-4FB8-498C-A7CE-DE818C91EA43} = {F5C85B5B-B786-454C-BB24-822826881735}
 		{AC17F809-1397-43DC-9961-0EC7F8C69EDD} = {694DAB50-E5DA-4ADC-AD63-591F2FC8EB35}
 		{8695475E-AC43-46D9-83D8-431975337DBE} = {F5C85B5B-B786-454C-BB24-822826881735}
+		{8C5B92F1-CB00-474E-9118-E798964D0638} = {8EF4D527-CD8B-4B75-89A3-44137F143AA7}
 	EndGlobalSection
 EndGlobal
